@@ -39,6 +39,7 @@
   <body>
   
   <div class="login-form">
+  <h2>We are using git now</h2>
         <form action="/examples/actions/confirmation.php" method="post">
             <h2 class="text-center">Register</h2>       
             <div class="form-group">
