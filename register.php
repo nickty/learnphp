@@ -39,38 +39,38 @@
   <body>
   
   <div class="login-form">
-  <h2>We are using git now</h2>
-        <form action="/examples/actions/confirmation.php" method="post">
+ 
+        <form action="reg_data.php" method="get">
             <h2 class="text-center">Register</h2>       
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name" required="required">
+                <input type="text" name="first_name" class="form-control" placeholder="First Name">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last Name" required="required">
+                <input type="text" name="last_name" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Age" required="required">
+                <input type="number" name="age" class="form-control" placeholder="Age">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Phone" required="required">
+                <input type="number" name="phone" class="form-control" placeholder="Phone">
             </div>
             <div class="form-group">
-                <textarea class="form-control" name="" id="" placeholder="Write your address"></textarea>
+                <textarea class="form-control" name="address" placeholder="Write your address"></textarea>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Zip Code" required="required">
+                <input type="number" name="zip_code" class="form-control" placeholder="Zip Code">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="City" required="required">
+                <input type="text" name="city" class="form-control" placeholder="City">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Country" required="required">
+                <input type="text" name="country" class="form-control" placeholder="Country">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="required">
+                <input type="password" name="password" class="form-control" placeholder="Password">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                <button type="submit" class="btn btn-primary btn-block">Register Now</button>
             </div>
                    
         </form>
