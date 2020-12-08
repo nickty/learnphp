@@ -40,13 +40,16 @@
   
   <div class="login-form">
  
-        <form action="reg_data.php" method="get">
+        <form action="reg_data.php" method="post">
             <h2 class="text-center">Register</h2>       
             <div class="form-group">
                 <input type="text" name="first_name" class="form-control" placeholder="First Name">
             </div>
             <div class="form-group">
                 <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Enter email">
             </div>
             <div class="form-group">
                 <input type="number" name="age" class="form-control" placeholder="Age">
