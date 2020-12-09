@@ -5,7 +5,7 @@
 //$arrr = ['apple', 'mango', 'lemon', 12]; 
 //var_dump($_POST); 
 
-
+session_start();
 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -17,6 +17,13 @@ $zip_code = $_POST['zip_code'];
 $city = $_POST['city'];
 $country = $_POST['country'];
 $password = $_POST['password'];
+
+
+if($first_name == '' || $last_name == '' || $email == '')
+{
+  echo "You can not insert data bacause one or more fields are/is emplty!"; 
+  return false; 
+}
 
 
 
@@ -43,6 +50,9 @@ $query = mysqli_query($conn, $sql);
 
 if($query){
     echo "User Registered Successfully!"; 
+    $_SESSION["email"] = $_POST['email'];
+    header("Location: profile.php");
+die();
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
