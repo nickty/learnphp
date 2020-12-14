@@ -38,6 +38,7 @@
   </head>
   <body>
   
+  
   <div class="login-form">
  
         <form action="reg_data.php" method="post">

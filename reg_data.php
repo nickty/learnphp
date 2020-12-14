@@ -30,11 +30,11 @@ if($first_name == '' || $last_name == '' || $email == '')
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$dbpassword = "";
 $db = 'learnphp'; 
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
+$conn = mysqli_connect($servername, $username, $dbpassword, $db);
 
 // Check connection
 if (!$conn) {
