@@ -1,5 +1,3 @@
-<h1>This is reg data</h1>
-
 <?php 
 
 //$arrr = ['apple', 'mango', 'lemon', 12]; 
@@ -41,6 +39,30 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+$sql = "SELECT * FROM users";
+
+$emails = $conn->query($sql);
+
+var_dump($emails); 
+
+$row = $emails->fetch_assoc(); 
+
+//var_dump($row['email']); 
+
+if (mysqli_num_rows($emails) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($emails)) {
+     if($row['email'] === $email){
+       echo "This email is alredy registered!"; 
+       echo $row['email']; 
+     }
+    
+  }
+} else {
+  echo "0 results";
+}
+
+return false; 
 
 $sql = "INSERT INTO users (first_name, last_name, email, age, phone, address, zip_code, city, country, password) VALUES ('$first_name', '$last_name', '$email', '$age', '$phone', '$address', '$zip_code', '$city', '$country', '$password')";
 
